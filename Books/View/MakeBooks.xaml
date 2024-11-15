@@ -1,0 +1,49 @@
+﻿<Window x:Class="Books.View.MakeBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Books.View"
+        mc:Ignorable="d"
+        Title="MakeBooks" Height="450" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row ="0" VerticalAlignment="Center">
+            <Label Content="Название книги" FontFamily="Times New Roman"/>
+            <TextBox x:Name="TitleTextBox" />
+
+            <Label Content="Автор" FontFamily="Times New Roman"/>
+            <TextBox x:Name="AuthorTextBox"  />
+
+            <Label Content="Год выпуска" FontFamily="Times New Roman"/>
+            <TextBox x:Name="YearTextBox"  />
+
+            <Label Content="Жанр" FontFamily="Times New Roman"/>
+            <TextBox x:Name="GenreTextBox"  />
+
+            <Label Content="Количество страниц" FontFamily="Times New Roman"/>
+            <TextBox x:Name="PagesTextBox" />
+        </StackPanel>
+        <Button  Click="SaveBook" Content="Сохранить" Margin="370,10,10,56" Height="42" Width="120" FontFamily="Times New Roman" Grid.Row="1" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Click="CancelEditing" Content="Отменить" Margin="10,10,370,56" Height="42" Width="120" FontFamily="Times New Roman" Grid.Row="1" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
